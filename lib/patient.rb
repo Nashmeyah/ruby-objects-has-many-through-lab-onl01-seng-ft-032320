@@ -13,6 +13,6 @@ class Patient
   end
 
   def appointments
-    Appointment.all.select {|appt| appt.patient == self}
+    Appointment.all.select {|appt| appt.patients == self}
   end
 end
