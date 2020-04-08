@@ -20,10 +20,6 @@ class Patient
     Appointment.new(doctor, self, date)
   end
 
-  def appointments
-    Appointment.all.select {|appt| appt.patients == self}
-  end
-
   def doctors
     appointments.map {|appt| appt.doctor}
   end
