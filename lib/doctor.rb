@@ -12,4 +12,9 @@ class Doctor
   def self.all
     @@all
   end
+
+  def new_appointment(name)
+    name = Patient.new(name, date)
+    name.doctor = self
+  end
 end
